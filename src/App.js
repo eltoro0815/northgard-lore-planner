@@ -35,8 +35,6 @@ const CLANS = {
   Ox: loreOx,
 };
 
-const gaTrackingId = "UA-167763709-1";
-
 function App() {
   const { clan, hash = "" } = useParams();
   const [selectedClan, setSelectedClan] = useState(clan);
@@ -44,10 +42,7 @@ function App() {
   const isDesktopRef = useRef(window.innerWidth >= 800);
 
   useEffect(() => {
-    // Initialize Google Analytics
-    ReactGA.initialize(gaTrackingId);
-    ReactGA.pageview(clan);
-
+    
     // Initialize lore build from url
     const lores = hash.match(/.{1,2}/g);
     if (lores) {
