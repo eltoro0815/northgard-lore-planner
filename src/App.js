@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import ReactGA from "react-ga";
 import { Link, useParams } from "react-router-dom";
 
 import BlessingRow from "./components/BlessingRow";
